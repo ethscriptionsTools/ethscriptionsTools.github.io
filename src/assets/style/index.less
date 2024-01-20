@@ -1,0 +1,165 @@
+@import './variables.less';
+// font-family
+@font-face {
+  font-family: "DINPro-Regular";
+  src: url('../font/DINPro.woff.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// font-family
+@font-face {
+  font-family: "DINPro-Bold";
+  src: url('../font/DINPro-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.iconfont {
+  margin-right: 5px;
+  font-size: 14px;
+  color: inherit !important;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: DINPro-Regular;
+}
+
+.bold-font {
+  font-family: DINPro-Bold;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+//scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+//thumb in scrollbar
+::-webkit-scrollbar-thumb {
+  background-color: @baseColor;
+  border-radius: 6px;
+}
+
+// placeholder in input
+input::-webkit-input-placeholder {
+  color: #666 !important;
+}
+
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #666 !important;
+}
+
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #666 !important;
+}
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #666 !important;
+}
+
+.suspension-bar {
+  z-index: 10;
+  background: @barColor;
+  border-radius: 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: #b8f807;
+  font-weight: 600;
+  position: relative;
+  line-height: 65px;
+
+  .name {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .on {
+    position: absolute;
+    left: 105%;
+    top: -10%;
+    font-size: 14px;
+    font-weight: 400;
+    width: 30px;
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    font-size: 16px;
+
+    img {
+    }
+
+    .on {
+      position: absolute;
+      left: 105%;
+      top: -10%;
+      font-size: 12px;
+      font-weight: 400;
+      width: 15px;
+      color: #fff;
+    }
+  }
+
+  .suspension-bar {
+    padding: 5px !important;
+  }
+
+  .suspension-bar .right .social img {
+    margin-right: 5px;
+  }
+
+}
+
+.el-button--success,
+.el-button--success:focus,
+.el-button--success.is-active,
+.el-button--success:active {
+  background: @btnColor !important;
+  color: @btnTextColor !important;
+  border-color: #ffffff4d !important;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2) !important;
+  font-family: DINPro-Bold;
+  font-weight: bold !important;
+  font-size: 16px !important;
+}
+
+.el-button--success:hover {
+  background: @btnHoverColor !important;
+  border-color: #ffffff4d !important;
+  color: @btnTextColor !important;
+}
+
